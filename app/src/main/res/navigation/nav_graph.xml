@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/walletFragment">
+
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.devilpanda.finances_client.view.WalletFragment"
+        android:label="Wallet"
+        tools:layout="@layout/fragment_wallet">
+        <action
+            android:id="@+id/action_homeFragment_to_cardDetailsFragment"
+            app:destination="@id/cardDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTransactionFragment"
+        android:name="com.devilpanda.finances_client.view.TransactionTypeFragment"
+        android:label="New Transaction"
+        tools:layout="@layout/fragment_type_transaction" >
+        <action
+            android:id="@+id/action_addTransactionFragment_to_transactionFragment"
+            app:destination="@id/transactionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/analiticsFragment"
+        android:name="com.devilpanda.finances_client.view.AnaliticsFragment"
+        android:label="fragment_analitics"
+        tools:layout="@layout/fragment_analitics" />
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.devilpanda.finances_client.view.CategoriesFragment"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.devilpanda.finances_client.view.HistoryFragment"
+        android:label="fragment_history_home"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/cardDetailsFragment"
+        android:name="com.devilpanda.finances_client.view.CardDetailsFragment"
+        android:label="fragment_card_details"
+        tools:layout="@layout/fragment_card_details" />
+    <fragment
+        android:id="@+id/transactionFragment"
+        android:name="com.devilpanda.finances_client.view.TransactionFragment"
+        android:label="fragment_transaction"
+        tools:layout="@layout/fragment_transaction" />
+</navigation>
